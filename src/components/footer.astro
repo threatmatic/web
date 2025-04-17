@@ -1,0 +1,68 @@
+---
+
+ import './src/styles/global.css'
+
+ import { Twitter } from 'lucide-astro';
+
+import logotext from '../assets/teal horizontal logo.png';
+import logotext_white from '../assets/white_horizontal.png';
+---
+<div class="min-w-max flex justify-center  bg-stone-50  dark:bg-gray-800">
+
+	<div class="container  min-h-fit  md:px-30 py-10 min-w-max ">
+	<div id="footer" class="flex flex-col min-h-max justify-center ">
+
+			<div class="flex flex-col  md:flex-row  min-w-max mx-5  gap-10 md:mr-20">
+
+				<div class=" h-auto w-auto grow">
+					<!-- <img src={teal_horizontal_logo.src} width="200" height="200" /> -->
+					<img src={logotext.src} width="200" height="160" class="my-4 dark_logo_footer" />
+					<img src={logotext_white.src} width="200" height="160" class="my-4 hidden white_logo_footer" />
+				</div>
+				<div class="flex-2">
+					<div class="flex gap-20 ">
+						<div class="lg:pl-10">
+							<ul>
+								<li class="text-black my-2 dark:text-slate-200">COMPANY</li>
+								<li class="text-gray-500 my-2 dark:text-slate-200">Product</li>
+								<li class="text-gray-500 my-2 dark:text-slate-200">Pricing</li>
+								<li class="text-gray-500 my-2 dark:text-slate-200">Blog</li>
+							</ul>
+						</div>
+						<div class="lg:pl-10">
+							<ul>
+								<li class="text-black m-2 dark:text-slate-200">LEGAL</li>
+								<li class="text-gray-500 m-2 dark:text-slate-200">Privacy</li>
+								<li class="text-gray-500 m-2 dark:text-slate-200">Terms of Use</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="lg:px-20">
+					
+					<ul>
+					<li class="text-black my-2 dark:text-slate-200">CONTACT US</li>
+					<li class="text-gray-500 my-2 dark:text-slate-200">info@threatmatic.com</li>
+					<li class="text-gray-500 my-2 dark:text-slate-200">+1 (714)-356-1728</li>
+					</ul>
+				</div>
+				
+	
+			</div>
+			<div class="m-5 h-0.5 w bg-gray-300"></div>
+	
+			<div class="flex flex-col md:flex-row justify-between m-5">
+				<div class="text-sm dark:text-slate-200"> &copy; 2024 ThreatMatic<sup>TM</sup>, Co. All rights reserved.</div>
+				<div class="text-sm dark:text-slate-200"> Version: 0.2.0 | Tag: 210fa47 | Date: 2024-12-05 13:22</div>
+				<div><Twitter class="dark:text-slate-200 text-black " ></div>
+			</div>
+		
+		
+		
+
+	</div>
+	
+</div>
+
+</div>
+<script src="../scripts/darkmode.js"></script>

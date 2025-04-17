@@ -1,0 +1,195 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+ import './src/styles/global.css'
+ import Footer from '../components/footer.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+
+import tm_circle from '../assets/tm_circle.png';
+import icon_control from '../assets/Asset_3.png';
+import { Fingerprint } from 'lucide-astro';
+import { Clock } from 'lucide-astro';
+import { ArrowRightLeft } from 'lucide-astro';
+import { MonitorPlay } from 'lucide-astro';
+import { AppWindow } from 'lucide-astro';
+import { Scale } from 'lucide-astro';
+import { Hourglass } from 'lucide-astro';
+import { CloudUpload } from 'lucide-astro';
+import { Cog } from 'lucide-astro';
+import { Search } from 'lucide-astro';
+import { Shield } from 'lucide-astro';
+import { Funnel } from 'lucide-astro';
+import { Brain } from 'lucide-astro';
+import { Bug } from 'lucide-astro';
+
+---
+
+<Layout>
+<Header/>
+	
+	
+	<div class="flex justify-center mt-12 md:mt-24 view">
+		<div  id="mainpage" class="container">
+			<div class=" my-5 py-7 md:py-10 flex flex-col justify-center text-center  gap-y-5 md:gap-y-1 items-center md:px-15 px-5">
+				<div id="moveleft" class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal transition-transform translate-x-15 duration-1000 -z-10">ThreatMatic™ Zero Trust Edge deploys in minutes and enforces ZTNA in milliseconds.</div>	
+				<div class="md:flex gap-5">
+					<div class="hidden md:block md:w-70"></div>
+					<div id="moveright" class="md:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg transition-transform -translate-x-15 duration-1000 relative -z-10">Cybersecurity today is focussed on protecting the perimeter and as a consequence the security architecture is built from the outside-in. In our hyperconnected current world with widely dispersed users and applications, this design creates a blind spot in the "east-west aperture" that can result in security breaches often accompanied by loss of data, trust and productivity. These disruptive events are often crippling and expensive to mitigate.</div>
+					<div class="hidden md:block md:w-70"></div>
+					
+				</div>
+			</div>
+			<div class="flex flex-col m-10 mx-20">
+				<div  class="md:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg blocks relative -z-10">We have taken a novel approach to building a Zero-Trust solution that is founded on the principles of simplicity of deployment and ultra low-latency policy updates. ThreatMatic can be hosted in the cloud or privately, or as a hybrid model to protect all your assets regardless of size, scope or location, in milliseconds.</div>
+					
+			</div>
+
+			<div class="flex flex-col m-10 mx-20">
+				<div  class="md:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg blocks relative -z-10">The ThreatMatic platform is engineered to thrive in a cybersecurity mesh (CSMA): lightning fast ZTNA enforcement directly on all your endpoints. With ultra-fast, onboarding, you can deploy app and user ID based least-privilege policies with super malleable microsegmentation in minutes.</div>
+					
+			</div>
+
+			
+			
+			
+
+		</div>
+
+	</div>
+
+</Layout>
+
+<Footer />
+
+<style>
+	@keyframes appearup {
+
+		from{
+			opacity: 0;
+			transform: translateY(100PX);
+		}
+		to{
+			opacity:1;
+			transform: translateY(0px);
+			
+		}
+		
+	}
+	.blocks{
+		animation:  appearup 10s linear;
+		animation-timeline: view();
+		animation-range: entry 0% cover 40%;
+	}
+
+	@keyframes appearLeft {
+
+	from{
+		opacity: 0;
+		transform: translateX(50PX);
+	}
+	to{
+		opacity:1;
+		transform: translateX(0px);
+		
+	}
+
+	}
+	.flowleft{
+	animation:  appearLeft 10s linear;
+	animation-timeline: view();
+	animation-range: entry 0% cover 40%;
+	scroll:none;
+	}
+</style>
+
+<script>
+	
+	  window.addEventListener('load', function() {
+
+      const moveRight = document.getElementById('moveright');
+	  const moveLeft = document.getElementById('moveleft');
+	  const moveUp = document.getElementById('moveup');
+
+      
+      // Ensure the element exists
+      if (moveRight) {
+        // Apply translate class and trigger transition
+		moveRight.classList.remove('-translate-x-15');
+        moveRight.classList.add('translate-x-0');
+      }
+
+	  if (moveLeft) {
+        // Apply translate class and trigger transition
+        moveLeft.classList.remove('translate-x-15');
+		moveLeft.classList.add('translate-x-0');
+      }
+
+	  if (moveUp) {
+        // Apply translate class and trigger transition
+        moveUp.classList.remove('translate-y-15');
+		moveUp.classList.add('translate-y-0');
+      }
+    });
+
+	// window.addEventListener('scroll', () => {
+	// 	const moveRight = document.getElementById('moveright1');
+	//   const moveLeft = document.getElementById('moveleft1');
+	//   const moveUp = document.getElementById('moveup1');
+
+	 
+      
+    //   // Ensure the element exists
+    //   if (moveRight) {
+    //     // Apply translate class and trigger transition
+	// 	moveRight.classList.remove('-translate-x-15');
+    //     moveRight.classList.add('translate-x-0');
+    //   }
+
+	//   if (moveLeft) {
+    //     // Apply translate class and trigger transition
+    //     moveLeft.classList.remove('translate-x-15');
+	// 	moveLeft.classList.add('translate-x-0');
+    //   }
+
+	//   if (moveUp) {
+    //     // Apply translate class and trigger transition
+    //     moveUp.classList.remove('translate-y-15');
+	// 	moveUp.classList.add('translate-y-0');
+    //   }
+    
+	// });
+// 	window.addEventListener('scroll', () => {
+//     // Get all the elements you want to apply translate effect to
+//     const elements = [
+//         document.getElementById('moveright1'),
+//         document.getElementById('moveleft1'),
+//         document.getElementById('moveup1')
+//     ];
+
+//     // Loop through each element
+//     elements.forEach((element) => {
+//         if (element) {
+//             // Get the element's position relative to the viewport
+//             const rect = element.getBoundingClientRect();
+            
+//             // Check if the element is in the viewport (you can adjust the threshold here if needed)
+//             if (rect.bottom <= window.innerHeight) {
+//                 // Apply translate effect if the element is in the viewport
+//                 element.classList.remove('-translate-x-15', 'translate-y-15', 'translate-x-15');
+//                 element.classList.add('translate-x-0', 'translate-y-0','translate-x-0');
+//             } else {
+//                 // If the element is not in the viewport, reset its position (optional)
+//                 element.classList.add('-translate-x-15', 'translate-y-15','translate-x-15' );
+//                 element.classList.remove('translate-x-0', 'translate-y-0', 'translate-x-0');
+// 				element.classList.add('translated');
+
+// 				console.log(element.classList);
+//             }
+//         }
+//     });
+//  });
+</script>

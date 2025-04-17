@@ -1,0 +1,251 @@
+---
+
+import teallogo from '../assets/logo_teal_img.png';
+import logotext from '../assets/teal horizontal logo.png';
+import logotext_white from '../assets/white_horizontal.png';
+import X from '../assets/x.svg'
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+import { Menu } from 'lucide-astro';
+import { Search } from 'lucide-astro';
+import { Sun } from 'lucide-astro';
+import { Moon } from 'lucide-astro';
+---
+
+ <div class = "flex justify-center relative">
+	<div class="container min-h-fit fixed" id="mainMenu">
+		<nav class=" min-w-max">
+	
+			 <!--<p style="font-family:Ethnocentric" class="cursor-pointer">ThreatMatic</p>-->
+			
+			<div class="flex items-center justify-between m-4 md:flex z-10">
+				<div class="flex items-center grow">
+					<!-- Hamburger Button -->
+					<!-- <button class="block md:hidden rounded-lg mr-4" id="myButton">
+						<div class="w-5 h-1 bg-gray-600 mb-1"></div>
+						<div class="w-5 h-1 bg-gray-600 mb-1"></div>
+						<div class="w-5 h-1 bg-gray-600"></div>
+					</button> -->
+					<!-- <img src={Menu.src} width="28" height="28" id="myButton" class="block md:hidden"/> -->
+					 <Menu  id="myButton" class="dark:text-slate-50 md:hidden" />
+				
+			
+					<!-- Logo -->
+					<div class="cursor-pointer flex">
+						<img src={teallogo.src} width="45" height="auto" class="my-1" />
+						<img src={logotext.src} width="200" height="160" class="my-4 dark_logo" />
+						<img src={logotext_white.src} width="200" height="160" class="my-4 hidden white_logo" />
+					</div>
+				</div>
+				
+					<ul id="lgMenu" class="hidden md:flex font-montserrat "> 
+						<li class="mx-4"><a href="/" class={`no-underline p-2 dark:text-slate-200 ${currentPath === "" ? "active" : ""}`}>Home</a></li>
+						<li class="mx-4"><a href="/product"  class={`no-underline p-2 dark:text-slate-200 ${currentPath === "product" ? "active" : ""}`}>Product</a></li>
+						<li class="mx-4"><a href="schannel" class={`no-underline p-2 dark:text-slate-200 ${currentPath === "schannel" ? "active" : ""}`}>sChannel</a></li>
+						<li class="mx-4"><a href="pricing" class={`no-underline p-2 dark:text-slate-200 ${currentPath === "pricing" ? "active" : ""}`}>Pricing</a></li>
+					</ul>
+				<div class="flex pr-3">
+					<!-- <img src={Sun.src} width="20" height="20"  class="cursor-pointer hidden sun"/>
+					<img src={Moon.src} width="20" height="20" class="cursor-pointer moon"/> -->
+					<Sun class="cursor-pointer hidden sun text-slate-50" />
+					<Moon class="cursor-pointer moon"/>
+
+					
+				</div>
+				<!-- <div class=""><img src={search.src} width="20" height="20" class="cursor-pointer"/><Search ></div> -->
+				<div class=""><Search class="dark:text-slate-50"></div> 
+			</div>
+
+			  
+	
+	
+		</nav>
+
+	
+	</div>
+	<div id="smMenu" class="fixed opacity-0 bg-black/50 w-full h-screen top-0 z-[-1] transition duration-300">
+		<div id="closeButton"  class="cursor-pointer absolute p-5"><img src={X.src} width="28" height="28" /></div>
+		<div id="menuOption" class="w-8/12 bg-gray-900 fixed top-0 left-0 h-full transform transition ease-in-out -translate-x-full duration-700 p-5 z-1">
+			<ul class="m-2 pt-10"> 
+				<li class="mx-4 py-2"><a href="/" class={`no-underline p-2 text-gray-300 ${currentPath === "" ? "active" : ""}`}>Home</a></li>
+				<li class="mx-4 py-2"><a href="/product" class={`no-underline p-2 text-gray-300 ${currentPath === "product" ? "active" : ""}`}>Product</a></li>
+				<li class="mx-4 py-2"><a href="/schannel" class={`no-underline p-2 text-gray-300 ${currentPath === "schannel" ? "active" : ""}`}>sChannel</a></li>
+				<li class="mx-4 py-2"><a href="/pricing" class={`no-underline p-2 text-gray-300 ${currentPath === "pricing" ? "active" : ""}`}>Pricing</a></li>
+			  </ul>
+			
+		  </div>
+
+	</div>
+ </div>
+ <script src="../scripts/darkmode.js"></script>
+
+ <script>
+ 
+  document.addEventListener('DOMContentLoaded', function () {
+
+	const mainMenuScroll = document.getElementById('mainMenu');
+	const white_logo = document.querySelector(".white_logo");
+	const dark_logo = document.querySelector(".dark_logo");
+	const moon = document.querySelector(".moon");
+	
+
+	window.addEventListener('scroll', () => {
+		if(mainMenuScroll && dark_logo && white_logo && moon){
+			if (window.scrollY > 50) { // Change 50 to the scroll position at which you want the background to change
+				mainMenuScroll.classList.add('bg-black/80'); // Add the black background
+				mainMenuScroll.classList.add('dark');
+				white_logo.classList.remove('hidden');
+				dark_logo.classList.add('hidden');
+				moon.classList.add('text-slate-50');
+
+
+				//console.log(mainMenuScroll.classList);
+
+			} else {
+				mainMenuScroll.classList.remove('bg-black/80'); // Remove the black background
+				mainMenuScroll.classList.remove('dark');
+				moon.classList.remove('text-slate-50');
+				const userTheme = localStorage.getItem("theme");
+				if (userTheme === 'light') {
+					dark_logo.classList.remove('hidden');
+					white_logo.classList.add('hidden');
+				}
+				else if(userTheme === 'dark'){
+					white_logo.classList.remove('hidden');
+					dark_logo.classList.add('hidden');
+
+
+				}
+				
+			}
+		}
+    
+});
+
+
+
+
+	const samllscreenMenu = document.getElementById('smMenu');
+	if(samllscreenMenu){
+	}
+	const button = document.getElementById('myButton');
+	if(button){
+		button.addEventListener('click', handleClick);
+	}
+
+	function handleClick() {
+		console.log('test');
+		const element = document.getElementById("smMenu");
+		const mainmenu = document.getElementById("mainMenu");
+		const menuoption = document.getElementById("menuOption");
+		const closeButton = document.getElementById("closeButton");
+		//const closeButton = document.getElementById("closeButton");
+		console.log(element);
+		console.log(mainmenu);
+		console.log(menuoption);
+		console.log(closeButton);
+		if (element && mainmenu && menuoption && closeButton) {  
+			element.classList.remove('opacity-0');
+			mainmenu.classList.remove('z-10');
+			element.classList.remove('z-[-1]');
+			menuoption.classList.remove('-translate-x-full');
+			menuoption.classList.add('translate-x-0');
+			menuoption.classList.add("w-8/12");
+			menuoption.classList.remove("z-1");
+			closeButton.classList.add("z-10");
+			closeButton.classList.add("animate-spin-once");
+
+
+			console.log(element.classList);
+			console.log(mainmenu.classList);
+			console.log(closeButton.classList);
+
+		} else {
+			console.warn("Element not found");
+		}
+	
+  	}
+
+	const close = document.getElementById('closeButton');
+	if(close){
+		close.addEventListener('click', closeMenu);
+	}
+
+	function closeMenu(){
+
+		const element = document.getElementById("smMenu");
+		const mainmenu = document.getElementById("mainMenu");
+		const menuoption = document.getElementById("menuOption");
+		const closeButton = document.getElementById("closeButton");
+		if((element && mainmenu && menuoption && closeButton)){
+			//closeButton.classList.add("animate-spin-once-back");
+			
+			
+			element.classList.add('opacity-0');
+			mainmenu.classList.add('z-10');
+			element.classList.add('z-[-1]');
+			menuoption.classList.add('-translate-x-full');
+			menuoption.classList.remove('translate-x-0');
+			menuoption.classList.remove("w-8/12");
+			menuoption.classList.add("z-1");
+			closeButton.classList.remove("z-10");
+			closeButton.classList.remove("animate-spin-once");
+
+			console.log("while closing");
+			console.log(element.classList);
+			console.log(mainmenu.classList);
+			console.log(closeButton.classList);
+		}
+	}
+
+	
+	
+	
+});
+const active = document.querySelector('.active');
+if(active){
+
+	active.classList.add('text-black', 'font-bold');
+
+	console.log(active.classList);
+}
+
+  </script>
+
+<style>
+	@keyframes rotateOnce {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+/* Class to apply the rotation */
+.animate-spin-once {
+  animation: rotateOnce 0.5s ease-in-out forwards; /* Spins once over 0.5 seconds */
+}
+
+.animate-spin-once-back {
+  animation: rotateOnce 0.5s ease-in-out backwards; /* Spins once over 0.5 seconds */
+}
+
+/* #menuOption {
+  transition: transform 0.5s ease-in-out; 
+} */
+
+/* .active {
+   
+   color: white; 
+	font-weight: bolder;
+}
+@media (prefers-color-scheme: dark) {
+   .active {
+      color: white; 
+   }
+} */
+  </style>
+
+  
+

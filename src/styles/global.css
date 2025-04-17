@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+  --background-image-main : "url('./src/assets/dark_bg_img.jpg')";
+  --font-ethnocentric: 'Ethnocentric-Regular_thin';
+  --font-ethnocentric2: 'Ethnocentric-Regular_thin2';
+  --font-ethnocentric3: 'Ethnocentric-Regular_thin3';
+  --font-Winky:'WinkySans';
+  --font-Montserrat:'Montserrat';
+
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
+@font-face {
+	font-family: 'Ethnocentric-Regular_thin';
+	src: url('/fonts/Ethnocentric-Regular_thin.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  } 
+
+@font-face {
+	font-family: 'Ethnocentric-Regular_thin2';
+	src: url('/fonts/Ethnocentric-Regular_thin2.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  } 
+
+  @font-face {
+	font-family: 'Ethnocentric-Regular_thin3';
+	src: url('/fonts/Ethnocentric-Regular_thin3.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'WinkySans';
+	src: url('/fonts/WinkySans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'Montserrat';
+	src: url('/fonts/Montserrat.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+body {
+	/* font-family: 'Montserrat'; */
+    font-family: "Montserrat", sans-serif;
+  }
+
+  /* *{
+	@apply transition-colors duration-500;
+} */
