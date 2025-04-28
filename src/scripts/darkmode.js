@@ -21,24 +21,32 @@ if (userTheme === 'dark') {
     moon.classList.add('hidden');
     dark_logo.classList.add('hidden');
     white_logo.classList.remove('hidden');
+    dark_logo_footer.classList.add('hidden');
+    white_logo_footer.classList.remove('hidden');
 } else if (userTheme === 'light') {
     htmlElement.classList.remove('dark');
     moon.classList.remove('hidden');
     sun.classList.add('hidden');
     dark_logo.classList.remove('hidden');
     white_logo.classList.add('hidden');
+    dark_logo_footer.classList.remove('hidden');
+    white_logo_footer.classList.add('hidden');
 } else if (systemTheme) {
     htmlElement.classList.add('dark');
     sun.classList.remove('hidden');
     moon.classList.add('hidden');
     dark_logo.classList.add('hidden');
     white_logo.classList.remove('hidden');
+    dark_logo_footer.classList.add('hidden');
+    white_logo_footer.classList.remove('hidden');
 } else {
     htmlElement.classList.remove('dark');
     moon.classList.remove('hidden');
     sun.classList.add('hidden');
     dark_logo.classList.remove('hidden');
     white_logo.classList.add('hidden');
+    dark_logo_footer.classList.remove('hidden');
+    white_logo_footer.classList.add('hidden');
 }
 
 moon.addEventListener('click', () => {

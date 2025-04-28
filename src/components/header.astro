@@ -1,9 +1,10 @@
 ---
-
 import teallogo from '../assets/logo_teal_img.png';
 import logotext from '../assets/teal horizontal logo.png';
 import logotext_white from '../assets/white_horizontal.png';
-import X from '../assets/x.svg'
+import X from '../assets/x.svg';
+import colorThreatmatic from '../assets/ThreatMatic_Horizontal_FullColor.png';
+import whiteThreatmatic from '../assets/ThreatMatic_Horizontal_White.png';
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 import { Menu } from 'lucide-astro';
@@ -12,12 +13,12 @@ import { Sun } from 'lucide-astro';
 import { Moon } from 'lucide-astro';
 ---
 
- <div class = "flex justify-center relative">
-	<div class="container min-h-fit fixed" id="mainMenu">
+ <div class = "max-w-ma min-h-max flex justify-center relative">
+	<div class="fixed w-12/12" id="mainMenu">
 		<nav class=" min-w-max">
 	
 			 <!--<p style="font-family:Ethnocentric" class="cursor-pointer">ThreatMatic</p>-->
-			
+				
 			<div class="flex items-center justify-between m-4 md:flex z-10">
 				<div class="flex items-center grow">
 					<!-- Hamburger Button -->
@@ -32,9 +33,11 @@ import { Moon } from 'lucide-astro';
 			
 					<!-- Logo -->
 					<div class="cursor-pointer flex">
-						<img src={teallogo.src} width="45" height="auto" class="my-1" />
+						<!-- <img src={teallogo.src} width="45" height="auto" class="my-1" />
 						<img src={logotext.src} width="200" height="160" class="my-4 dark_logo" />
-						<img src={logotext_white.src} width="200" height="160" class="my-4 hidden white_logo" />
+						<img src={logotext_white.src} width="200" height="160" class="my-4 hidden white_logo" /> -->
+						<img src={colorThreatmatic.src} width="250" height="auto" class=" dark_logo" />
+						<img src={whiteThreatmatic.src} width="250" height="auto" class=" hidden white_logo" />
 					</div>
 				</div>
 				
@@ -94,9 +97,11 @@ import { Moon } from 'lucide-astro';
 			if (window.scrollY > 50) { // Change 50 to the scroll position at which you want the background to change
 				mainMenuScroll.classList.add('bg-black/80'); // Add the black background
 				mainMenuScroll.classList.add('dark');
+				mainMenuScroll.classList.add('transition', 'duration-500', 'ease-in-out');
 				white_logo.classList.remove('hidden');
 				dark_logo.classList.add('hidden');
 				moon.classList.add('text-slate-50');
+				
 
 
 				//console.log(mainMenuScroll.classList);
@@ -146,7 +151,7 @@ import { Moon } from 'lucide-astro';
 		console.log(closeButton);
 		if (element && mainmenu && menuoption && closeButton) {  
 			element.classList.remove('opacity-0');
-			mainmenu.classList.remove('z-10');
+			mainmenu.classList.remove('z-20');
 			element.classList.remove('z-[-1]');
 			menuoption.classList.remove('-translate-x-full');
 			menuoption.classList.add('translate-x-0');
@@ -182,7 +187,7 @@ import { Moon } from 'lucide-astro';
 			
 			
 			element.classList.add('opacity-0');
-			mainmenu.classList.add('z-10');
+			mainmenu.classList.add('z-20');
 			element.classList.add('z-[-1]');
 			menuoption.classList.add('-translate-x-full');
 			menuoption.classList.remove('translate-x-0');

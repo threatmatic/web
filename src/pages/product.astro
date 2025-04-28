@@ -10,7 +10,7 @@ import Header from '../components/header.astro';
 
 
 import tm_circle from '../assets/tm_circle.png';
-import icon_control from '../assets/Asset_3.png';
+import th_video from '../assets/wh_viedo.mp4';
 import { Fingerprint } from 'lucide-astro';
 import { Clock } from 'lucide-astro';
 import { ArrowRightLeft } from 'lucide-astro';
@@ -30,41 +30,45 @@ import { Bug } from 'lucide-astro';
 
 <Layout>
 <Header/>
-	
-	
-	<div class="flex justify-center mt-12 md:mt-24 view">
-		<div  id="mainpage" class="container">
-			<div class=" my-5 py-7 md:py-10 flex flex-col justify-center text-center  gap-y-5 md:gap-y-1 items-center md:px-15 px-5">
-				<div id="moveleft" class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal transition-transform translate-x-15 duration-1000 -z-10">ThreatMatic™ Zero Trust Edge deploys in minutes and enforces ZTNA in milliseconds.</div>	
-				<div class="md:flex gap-5">
-					<div class="hidden md:block md:w-70"></div>
-					<div id="moveright" class="md:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg transition-transform -translate-x-15 duration-1000 relative -z-10">Cybersecurity today is focussed on protecting the perimeter and as a consequence the security architecture is built from the outside-in. In our hyperconnected current world with widely dispersed users and applications, this design creates a blind spot in the "east-west aperture" that can result in security breaches often accompanied by loss of data, trust and productivity. These disruptive events are often crippling and expensive to mitigate.</div>
-					<div class="hidden md:block md:w-70"></div>
-					
-				</div>
-			</div>
-			<div class="flex flex-col m-10 mx-20">
-				<div  class="md:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg blocks relative -z-10">We have taken a novel approach to building a Zero-Trust solution that is founded on the principles of simplicity of deployment and ultra low-latency policy updates. ThreatMatic can be hosted in the cloud or privately, or as a hybrid model to protect all your assets regardless of size, scope or location, in milliseconds.</div>
-					
-			</div>
 
-			<div class="flex flex-col m-10 mx-20">
-				<div  class="md:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg blocks relative -z-10">The ThreatMatic platform is engineered to thrive in a cybersecurity mesh (CSMA): lightning fast ZTNA enforcement directly on all your endpoints. With ultra-fast, onboarding, you can deploy app and user ID based least-privilege policies with super malleable microsegmentation in minutes.</div>
-					
+<div class="max-w-max flex flex-col items-center mt-12 md:mt-24	">
+
+	<!-- <div class="flex justify-center items-center my-8">
+		<video 
+		  class="w-full max-w-3xl rounded-lg shadow-lg" 
+		  controls 
+		  autoplay
+		  loop
+		>
+		  <source src="../assets/wh_viedo.mp4" type="video/mp4">
+		  Your browser does not support the video tag.
+		</video>
+	  </div> -->
+
+	<div class="continer">
+
+		<div class=" my-5 py-10 md:py-10 flex flex-col justify-center text-center  gap-y-5 md:gap-y-1 items-center md:px-15 px-5">
+			<div id="moveleft" class="font-ethnocentric3 text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal transition-transform translate-x-15 duration-1000 -z-10">ThreatMatic deploys</div>	
+			<div class="md:flex gap-5">
+				<div class="hidden md:block md:w-70"></div>
+				<div id="moveright" class="lg:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg transition-transform -translate-x-15 duration-1000 relative -z-10">Cybersecurity today is focussed on protecting the perimeter and as a consequence the security architecture is built from the outside-in. In our hyperconnected current world with widely dispersed users and applications, this design creates a blind spot in the "east-west aperture" that can result in security breaches often accompanied by loss of data, trust and productivity. These disruptive events are often crippling and expensive to mitigate.</div>
+				<div class="hidden md:block md:w-70"></div>
+				
 			</div>
+		</div>	
 
-			
-			
-			
 
-		</div>
 
 	</div>
 
-</Layout>
+</div>
+	
+
+
+
 
 <Footer />
-
+</Layout>
 <style>
 	@keyframes appearup {
 

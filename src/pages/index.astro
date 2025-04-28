@@ -30,103 +30,31 @@ import { Bug } from 'lucide-astro';
 
 <Layout>
 <Header/>
-	
-	<!-- <div class="container max-w-max max-h-screen">
 
-		<div class="flex justify-center mt-10 md:mt-5">
-			<h1 class="font-ethnocentric font-light text-5xl"><span class="font-thin text-amber-400">test</span></h1>
-			<h1 class="font-ethnocentric2 font-light text-7xl"><span class="font-thin text-amber-400">test</span></h1>
-			<h1 class="font-ethnocentric3 font-light text-7xl"><span class="font-thin text-amber-400">test</span></h1>
-
-		</div>
-		<div class="flex justify-center mt-10 md:mt-5">
-			<h1 class="font-ethnocentric font-light">test</h1>
-
-			<div class=" mx-2 md:m-7  md:mx-96 text-[18px] md:text-xl dark:text-slate-200">ThreatMatic<sup class="text-[10px] dark:text-slate-200">TM</sup> bridges the gap between security and usability.  Our intuitive UI and modular Zero Trust architecture delivers lightning-fast, real-time protection against ransomware, malware, phishing, DNS poisoning, and more. Defend your most critical assets with unparalleled ease, security and performance.</div>
-				
-			
-
-		</div>
-		<div class="">
-			<div class="grid grid-rows-1 md:grid-cols-4 gap-4">
-				<div class=" bg-amber-300 p-5 font-bold w-auto">01</div>
-				<div class=" bg-amber-300 p-5">02</div>
-				<div class=" bg-amber-300 p-5">03</div>
-				<div class=" bg-amber-300 p-5">04</div>
-				<div class="col-span-4 grid text-center grid-cols-subgrid">
-					<div class=" bg-amber-300 p-5 col-start-4">05</div>
-				</div>
-				
-			</div>
-		</div>
-	</div> -->
-	<!-- <div class="container px-5 mt-24 max-w-max h-screen">
-		
-
-		<div class="text-center">
-			<div class="grid grid-flow-rows md:grid-cols-[200px_minmax(900px,_1fr)_200px] ">
-				<div></div>
-				<div class="font-ethnocentric3 text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal">Zero Trust Demystified</div>
-				<div></div>
-			</div>
-		</div>
-		<div class="grid gap-4 md:grid-cols-[200px_minmax(900px,_1fr)_200px] grid-rows-1">
-			<div class=""></div>
-			<div class=" md:p-5 dark:text-slate-200 text-justify">ThreatMatic<sup class="text-[10px] dark:text-slate-200">TM</sup> bridges the gap between security and usability.  Our intuitive UI and modular Zero Trust architecture delivers lightning-fast, real-time protection against ransomware, malware, phishing, DNS poisoning, and more. Defend your most critical assets with unparalleled ease, security and performance.</div>
-			<div class=" bg-amber-300 md:p-5">03</div>
-			<div class=" bg-amber-300 md:p-5">03</div>    
-			<div class="md:col-span-3 grid grid-cols-subgrid">
-				<div class=" bg-amber-300 p-5 col-start-2">05</div>
-			</div>
-			
-		</div>
-
-	</div> -->
-
-<!-- 
-	<div class="container px-5 mt-24 max-w-max">
-		<div class="flex flex-col justify-center">
-
-			<div class="text-center flex justify-center">
-				<div class="font-ethnocentric3 text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal ">Zero Trust Demystified</div>	
-			</div>
-			<div class="flex justify-center">
-				<div class=" md:p-5 dark:text-slate-200 text-justify">ThreatMatic<sup class="text-[10px] dark:text-slate-200">TM</sup> bridges the gap between security and usability.  Our intuitive UI and modular Zero Trust architecture delivers lightning-fast, real-time protection against ransomware, malware, phishing, DNS poisoning, and more. Defend your most critical assets with unparalleled ease, security and performance.</div>
-				
-			</div>
-			<div class=" my-5 py-7 md:py-10 flex flex-col justify-center text-center gap-y-10 items-center">
-				<div class="flex justify-center">
-					<div class=" md:p-5 dark:text-slate-200 text-justify">ThreatMatic<sup class="text-[10px] dark:text-slate-200">TM</sup> bridges the gap between security and usability.  Our intuitive UI and modular Zero Trust architecture delivers lightning-fast, real-time protection against ransomware, malware, phishing, DNS poisoning, and more. Defend your most critical assets with unparalleled ease, security and performance.</div>
-					
-				</div>
-			</div>
-	
-		</div>
-	</div> -->
-	<div class="flex justify-center mt-12 md:mt-24 view">
+	<div class="flex flex-col items-center mt-12 md:mt-24">
 		<div  id="mainpage" class="container">
-			<div class=" my-5 py-7 md:py-10 flex flex-col justify-center text-center  gap-y-5 md:gap-y-1 items-center md:px-15 px-5">
+			<div class=" my-5 py-10 md:py-10 flex flex-col justify-center text-center  gap-y-5 md:gap-y-1 items-center md:px-15 px-5">
 				<div id="moveleft" class="font-ethnocentric3 text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal transition-transform translate-x-15 duration-1000 -z-10">Zero Trust Demystified</div>	
 				<div class="md:flex gap-5">
 					<div class="hidden md:block md:w-70"></div>
-					<div id="moveright" class="md:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg transition-transform -translate-x-15 duration-1000 relative -z-10">ThreatMatic<sup class="text-[10px] dark:text-slate-200">TM</sup> strikes the perfect balance between security and usability. Our modular and uninterruptible Zero Trust enforcement design, managed from an ultra-easy and modern UI ensures that your most valuable assets are protected instantaneously with ZTNA - your advantage when responding to ransomware, malware, phishing attacks, DNS poisoning and so much more. QSChannel™ Zones and Cloudiffusion™ enable you to deploy microsegmentation and cloud integration with unparalleled ease, security and performance.</div>
+					<div id="moveright" class="lg:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg transition-transform -translate-x-15 duration-1000 relative -z-10">ThreatMatic<sup class="text-[10px] dark:text-slate-200">TM</sup> strikes the perfect balance between security and usability. Our modular and uninterruptible Zero Trust enforcement design, managed from an ultra-easy and modern UI ensures that your most valuable assets are protected instantaneously with ZTNA - your advantage when responding to ransomware, malware, phishing attacks, DNS poisoning and so much more. QSChannel™ Zones and Cloudiffusion™ enable you to deploy microsegmentation and cloud integration with unparalleled ease, security and performance.</div>
 					<div class="hidden md:block md:w-70"></div>
 					
 				</div>
 			</div>	
 			<div id="moveup" class="my-5 py-7 flex flex-col md:flex-row justify-center md:gap-x-10  gap-y-10 items-center md:px-15 px-5 transition-transform translate-y-15 duration-1000 relative -z-10 ">
-				<div class=""><button class="px-6 py-2 bg-gradient-to-tr from-[#49BFBF] from-10% to-[#264D70] to-90% dark:bg-gradient-to-tr dark:from-[#264D70] dark:to-[#49BFBF] transform transition-colors duration-500 text-white text-base font-thin rounded-md focus:outline-none w-auto h-auto hover:scale-110 ">
+				<div class=""><button class="px-6 py-2  bg-radial from-[#49BFBF]  to-[#264D70] dark:bg-gradient-to-t dark:from-[#264D70] dark:to-[#49BFBF] text-white text-base font-thin rounded-md focus:outline-none w-auto h-auto hover:scale-110 ">
 					Try ThreatMatic Free
 				  </button></div>
-				  <div class=""><button class="px-6 py-2 bg-gradient-to-tr from-[#49BFBF] from-10% to-[#264D70] to-90% dark:bg-gradient-to-tr dark:from-[#264D70] dark:to-[#49BFBF] transform transition-colors duration-500 text-white text-base font-thin rounded-md focus:outline-none w-auto h-auto hover:scale-110 ">
+				  <div class=""><button class="px-6 py-2 bg-radial from-[#49BFBF]  to-[#264D70] dark:bg-gradient-to-t dark:from-[#264D70] dark:to-[#49BFBF] text-white text-base font-thin rounded-md focus:outline-none w-auto h-auto hover:scale-110 ">
 					Request a Demo
 				  </button></div>
-				  <div class=""><button class="px-6 py-2 bg-gradient-to-tr from-[#49BFBF] from-10% to-[#264D70] to-90% dark:bg-gradient-to-tr dark:from-[#264D70] dark:to-[#49BFBF] text-white text-base font-thin rounded-md focus:outline-none w-auto h-autohover:scale-110 transition-transform">
+				  <div class=""><button class="px-6 py-2  bg-radial from-[#49BFBF]  to-[#264D70] dark:bg-gradient-to-t dark:from-[#264D70] dark:to-[#49BFBF] text-white text-base font-thin rounded-md focus:outline-none w-auto h-autohover:scale-110 transition-transform">
 					Request a Demo
 				  </button></div>
 			</div>
 			<div class="flex justify-center m-5 pb-10 md:px-15 px-5">
-				<img src={tm_circle.src} width="auto" height="auto" class="my-1" />
+				<img src={tm_circle.src} width="auto" height="auto" class="my-1 md:w-3xl h-auto" />
 			</div>
 			<div class="blocks relative -z-10">
 				<div class="flex  flex-col md:flex-row justify-center m-5 text-center md:gap-x-30 items-center gap-y-10 mt-3 md:px-15 px-5" >
@@ -148,9 +76,9 @@ import { Bug } from 'lucide-astro';
 			<div class="md:px-15 px-5 blocks relative -z-10">
 				<div class=" my-5 py-7 md:pt-20 flex flex-col justify-center text-center gap-y-5 md:gap-y-1 items-center">
 					<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal ">Simplicity Comes Standard</div>	
-					<div class="md:flex gap-x-5">
+					<div class="flex justify-center">
 						<div class="hidden md:block md:w-80"></div>
-						<div class="md:p-5 dark:text-slate-200 text-center md:text-center grow md:text-lg">Whether you’re a 10 person small business or a large enterprise, ThreatMatic™ enables uncompromising endpoint protection. Lightning fast policy changes with no learning curve and instantaneous ZTNA enforcement: all adminstered by a refreshingly simple and modern UI.</div>
+						<div class="lg:p-5 dark:text-slate-200 text-center md:text-center grow md:text-lg">Whether you’re a 10 person small business or a large enterprise, ThreatMatic™ enables uncompromising endpoint protection. Lightning fast policy changes with no learning curve and instantaneous ZTNA enforcement: all adminstered by a refreshingly simple and modern UI.</div>
 						<div class="hidden md:block md:w-80"></div>
 						
 					</div>
@@ -171,61 +99,74 @@ import { Bug } from 'lucide-astro';
 					</div>
 
 			</div>
-			<div class="my-20 bg-gray-50 dark:bg-black/50">
-				<div class="md:px-15 px-5 flex flex-col md:flex-row  justify-between items-center ">
-					<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal m-5 w-10/12">ZERO TRUST</div>
-					<div class="flowleft relative z-0">
+		</div>
+
+
+
+		
+		<div class="my-10 bg-gray-50 dark:bg-black/50 w-12/12 -z-10   flex flex-col items-center ">
+				<div class="lg:px-15 px-5 flex flex-col md:flex-row  justify-between items-center py-4 ">
+					<div class="lg:px-15 px-5 flex flex-col md:flex-col lg:flex-row justify-between items-center 	">
+						
+						<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal  md:m-5 md:w-10/12">Zero Trust</div>
+					
+						<br>
+						<div class="flowleft -z-20">
+							<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
+								<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+									<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
+										<MonitorPlay class="text-slate-200 dark:text-[#264D70] "  /> 
+									</div>
+									<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+										<div class="text-xl font-bold">Application Control</div>
+										<div>Audit or block applications directly on endpoints by any user, group, device or device-pool groupings.</div>
+									</div> 
+								</div>
+		
+								<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+									<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
+										<AppWindow class="text-slate-200 dark:text-[#264D70] "  />
+									</div>
+									<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+										<div class="text-xl font-bold">Executable Control</div>
+										<div>Audit or block any executable to IPv4 or IPv6 addresses at endpoints.</br></div>
+									</div>
+								</div>
+		
+								<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+									<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
+										<Scale class="text-slate-200 dark:text-[#264D70] "  />
+									</div>
+									<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+										<div class="text-xl font-bold">Instant Rule-Based Traffic Control</div>
+										<div>Instantly block in-flight traffic by deploying rules to users, groups, devices, and device-pools.</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+	
+		</div>
+		<div class="my-10 w-12/12 flex flex-col items-center ">
+			<div class="lg:px-15 px-5 flex flex-col md:flex-row  justify-between items-center py-4 ">
+				<div class="lg:px-15 px-5 flex flex-col md:flex-col lg:flex-row justify-between items-center 	">
+					
+					<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal  md:m-5 md:w-10/12">Take Control of Your Bandwidth</div>
+				
+					<br>
+					<div class="flowleft -z-20">
 						<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
 							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
 								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
-									<MonitorPlay class="text-slate-200 dark:text-[#264D70] "  />
-								</div>
-								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
-									<div class="text-xl font-bold">Application Control</div>
-									<div>Audit or block applications directly on endpoints by any user, group, device or device-pool groupings.</div>
-								</div>
-							</div>
-	
-							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
-								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
-									<AppWindow class="text-slate-200 dark:text-[#264D70] "  />
-								</div>
-								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
-									<div class="text-xl font-bold">Executable Control</div>
-									<div>Audit or block any executable to IPv4 or IPv6 addresses at endpoints.</br></div>
-								</div>
-							</div>
-	
-							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
-								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
-									<Scale class="text-slate-200 dark:text-[#264D70] "  />
-								</div>
-								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
-									<div class="text-xl font-bold">Instant Rule-Based Traffic Control</div>
-									<div>Instantly block in-flight traffic by deploying rules to users, groups, devices, and device-pools.</div>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-					
-				</div>
-				
-				
-			</div>
-			<div class="my-20 w-12/12">
-				<div class="md:px-15 px-5 flex flex-col md:flex-row  justify-between items-center ">
-					<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal m-5 w-12/12 md:mx-10">Take Control of Your Bandwidth</div>
-					<div class="flowleft relative z-0">
-						<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between">
-							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
-								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
-									<Hourglass class="text-slate-200 dark:text-[#264D70] "  />
+									<Hourglass class="text-slate-200 dark:text-[#264D70] "  /> 
 								</div>
 								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 									<div class="text-xl font-bold">Free Up Your Bandwidth</div>
 									<div>Manage network bandwidth to prevent bandwidth-starving software updates.</div>
-								</div>
+								</div> 
 							</div>
 	
 							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
@@ -234,7 +175,7 @@ import { Bug } from 'lucide-astro';
 								</div>
 								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 									<div class="text-xl font-bold">Internet & Cloud Resource Bandwidth Limits</div>
-									<div>Fine-tune bandwidth throttle rates for executables accessing your cloud-resources or the internet.</div>
+									<div>Fine-tune bandwidth throttle rates for executables accessing your cloud-resources or the internet.</br></div>
 								</div>
 							</div>
 	
@@ -250,16 +191,19 @@ import { Bug } from 'lucide-astro';
 							
 						</div>
 					</div>
+					
 				</div>
-				
-				
 			</div>
-			<div class="my-20 bg-gray-50 dark:bg-black/50">
-				<div class="md:px-15 px-5 flex flex-col md:flex-row  justify-between items-center ">
-					<!-- <div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal m-5 w-10/12">Secure Your Network
-					</div> -->
-					<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal m-5 md:w-10/12">Secure Your Network</div>
-					<div class="flowleft relative z-0">
+
+		</div>
+		<div class="my-10 bg-gray-50 dark:bg-black/50 w-12/12 -z-10 flex flex-col items-center ">
+			<div class="lg:px-15 px-5 flex flex-col md:flex-row  justify-between items-center py-4 ">
+				<div class="lg:px-15 px-5 flex flex-col md:flex-col lg:flex-row justify-between items-center 	">
+					
+					<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal  md:m-5 md:w-10/12">Secure Your Network</div>
+				
+					<br>
+					<div class="flowleft -z-20">
 						<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
 							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
 								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
@@ -268,7 +212,7 @@ import { Bug } from 'lucide-astro';
 								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 									<div class="text-xl font-bold">Inbound Access Control</div>
 									<div>Orchestrate inbound access rules directly on all your endpoints.</div>
-								</div>
+								</div> 
 							</div>
 	
 							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
@@ -295,15 +239,17 @@ import { Bug } from 'lucide-astro';
 					</div>
 					
 				</div>
-				
-				
 			</div>
-			<div class="my-20">
-				<div class="md:px-15 px-5 flex flex-col md:flex-row  justify-between items-center ">
-					<!-- <div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal m-5 w-10/12">Secure Your Network
-					</div> -->
-					<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal m-5 md:w-12/12 md:mx-10">Microsegmentation</div>
-					<div class="flowleft relative z-0">
+
+		</div>
+		<div class="my-10 flex flex-col items-center ">
+			<div class="lg:px-15 px-5 flex flex-col md:flex-row  justify-between items-center py-4 ">
+				<div class="lg:px-15 px-5 flex flex-col md:flex-col lg:flex-row justify-between items-center 	">
+					
+					<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal  md:m-5 md:w-10/12">Microsegment</div>
+				
+					<br>
+					<div class="flowleft -z-20">
 						<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
 							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
 								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
@@ -312,7 +258,7 @@ import { Bug } from 'lucide-astro';
 								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 									<div class="text-xl font-bold">QSChannel Zones</div>
 									<div>Simple and direct policy action to build unlimited any-to-any nano- and micro-segments:</div>
-								</div>
+								</div> 
 							</div>
 	
 							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
@@ -331,7 +277,7 @@ import { Bug } from 'lucide-astro';
 								</div>
 								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 									<div class="text-xl font-bold">Cloudiffusion</div>
-									<div>Instantly block or throttle in-progress or scheduled software updates with known vulnerabilitiesSeamless and secure diffusion between on-prem-private and public clouds, with ZTNA policies.</div>
+									<div>Seamless and secure diffusion between on-prem-private and public clouds, with ZTNA policies.</div>
 								</div>
 							</div>
 							
@@ -339,15 +285,96 @@ import { Bug } from 'lucide-astro';
 					</div>
 					
 				</div>
-				
-				
 			</div>
-			
-			
 
 		</div>
+		<div class="my-10 bg-gray-50 dark:bg-black/50 w-12/12 -z-10 flex flex-col items-center ">
+			<div class="lg:px-15 px-5 flex flex-col md:flex-row  justify-between items-center py-4 ">
+				<div class="lg:px-15 px-5 flex flex-col md:flex-col lg:flex-row justify-between items-center 	">
+					
+					<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal  md:m-5 md:w-10/12">Defense-in-Depth</div>
+				
+					<br>
+					<div class="flowleft -z-20">
+						<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
+							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
+									<Brain class="text-slate-200 dark:text-[#264D70] "  /> 
+								</div>
+								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+									<div class="text-xl font-bold">Threat Intelligence Integration</div>
+									<div>Combine Cloud-based threat intelligence to automate instantaneous anti-malware policy delivery to your endpoints.</div>
+								</div> 
+							</div>
+	
+							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
+									<AppWindow class="text-slate-200 dark:text-[#264D70] "  />
+								</div>
+								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+									<div class="text-xl font-bold">Browser DNS-over-HTTP Control</div>
+									<div>Control DNS-over-HTTP for individual browsers by user, group, or device.</br></div>
+								</div>
+							</div>
+	
+							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
+									<Bug class="text-slate-200 dark:text-[#264D70] "  />
+								</div>
+								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+									<div class="text-xl font-bold">Precise Malware Blocking</div>
+									<div>Instantly block malware executables from contacting C2 or from spreading.</div>
+								</div>
+							</div>
 
-	</div>
+							<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+								<div class="w-10 h-10 rounded-4xl bg-[#264D70] dark:bg-gray-200  p-2 ">
+									<Funnel class="text-slate-200 dark:text-[#264D70] "  />
+								</div>
+								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+									<div class="text-xl font-bold">Granular DNS Traffic Control</div>
+									<div>Control DNS traffic to specific servers, and resolution to specific domains.</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+		
+
+		
+
+		  <div class="w-12/12 flex lg:flex-row flex-col item-center gap-x-10  py-5">
+			<div class="w-full px-15 py-5">
+				<div class="font-ethnocentric3 text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal  md:m-5 md:w-10/12">Defense-in-Depth</div>
+	
+				<div class="dark:text-slate-200">ThreatMatic™ strikes the perfect balance between security and usability.</div>
+			</div>
+	
+			<div class="w-full max-w-2xl  aspect-video px-15 py-5 ">
+				<iframe 
+				  class="w-full h-full"
+				  src="https://lh3.googleusercontent.com/drive-storage/AJQWtBMO6u6ZNZkuspMH9YRNxX76KBUPd5Tu-pmdpctIfMR2sSBzNTE-l6G2A3domjkybz3hK9M5MkZ3VjqPtqlQjROQZw4wcB9KsAIe7g=s512" 
+				  title="YouTube video player" 
+				  frameborder="0" 
+				  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+				  allowfullscreen>
+				</iframe>
+			  </div>
+		  </div>
+		<div class = "max-w-max flex flex-col items-center py-5	">
+			<p class="m-5 text-3xl font-extrabold dark:text-slate-200">Join our Mailing List!</p>
+			<div class="pm-5"><button class="px-6 py-2 bg-radial from-[#49BFBF]  to-[#264D70] dark:bg-gradient-to-t dark:from-[#264D70] dark:to-[#49BFBF] text-white text-base font-thin rounded-md focus:outline-none w-auto h-auto hover:scale-110">
+				Intrest Form
+			  </button></div>
+		</div>
+		
+
+	</div>	
 
 </Layout>
 
