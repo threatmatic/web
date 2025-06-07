@@ -34,24 +34,61 @@ import { Bug } from 'lucide-astro';
 <div class="max-w-max flex flex-col items-center mt-12 md:mt-24	">
 
 	 <div class="flex justify-center items-center my-8 -z-20">
-		<video 
+		
+		<!-- <video 
 		   class="w-full rounded-lg shadow-lg" 
 		  controls 
 		  autoplay
 		  loop
+		  playsinline
+		  
+		  poster="../src/assets/Gradient_Background.jpeg"
 		> 
 		  <source src="../src/assets/wh_viedo.mp4" type="video/mp4"> 
 		  Your browser does not support the video tag.
+		</video> -->
+
+		<!-- <video
+		id="heroVideo"
+		class="w-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"
+		controls
+		autoplay
+		muted
+		loop
+		playsinline
+		poster="../src/assets/Gradient_Background.jpeg"
+		>
+		</video> -->
+
+		<div class="relative w-full rounded-lg shadow-lg">
+		<img
+			id="videoOverlayImage"
+			src="../src/assets/Gradient_Background.jpeg"
+			alt="Overlay Image"
+			class="absolute inset-0 w-full h-full object-cover rounded-lg z-10"
+		/>
+
+		<video
+			id="heroVideo"
+			class="w-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"
+			controls
+			autoplay
+			muted
+			loop
+			playsinline
+			poster="../src/assets/Threatmatic_Banner1.png"
+		>
 		</video>
+		</div>
 	  </div> 
 
 	<div class="continer">
 
 		<div class=" my-5 py-10 md:py-10 flex flex-col justify-center text-center  gap-y-5 md:gap-y-1 items-center md:px-15 px-5">
-			<div id="moveleft" class="font-ethnocentric3 text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal transition-transform translate-x-15 duration-1000 -z-10">ThreatMatic deploys</div>	
+			<div id="" class="font-ethnocentric3 text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal -z-10">ThreatMatic deploys</div>	
 			<div class="md:flex gap-5">
 				<div class="hidden md:block md:w-70"></div>
-				<div id="moveright" class="lg:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg transition-transform -translate-x-15 duration-1000 relative -z-10">Cybersecurity today is focussed on protecting the perimeter and as a consequence the security architecture is built from the outside-in. In our hyperconnected current world with widely dispersed users and applications, this design creates a blind spot in the "east-west aperture" that can result in security breaches often accompanied by loss of data, trust and productivity. These disruptive events are often crippling and expensive to mitigate.</div>
+				<div id="" class="lg:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg  relative -z-10">Cybersecurity today is focussed on protecting the perimeter and as a consequence the security architecture is built from the outside-in. In our hyperconnected current world with widely dispersed users and applications, this design creates a blind spot in the "east-west aperture" that can result in security breaches often accompanied by loss of data, trust and productivity. These disruptive events are often crippling and expensive to mitigate.</div>
 				<div class="hidden md:block md:w-70"></div>
 				
 			</div>
@@ -63,14 +100,14 @@ import { Bug } from 'lucide-astro';
 			<div class="flex  flex-col md:flex-row m-5 text-center md:gap-x-30 gap-y-10 mt-3 md:px-15 px-5" >
 				<div>
 					<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
-						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5 shadow-xl/30 shadow-[#49BFBF] inset-shadow-sm inset-shadow-cyan-500/50 rounded-xl p-5">
 							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 								<div class="text-xl font-bold">Simplicity</div>
 								<div>Zero-Trust solution founded on simplicity of deployment and ultra low-latency policy updates.</div>
 							</div> 
 						</div>
 
-						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5 shadow-xl/30 inset-shadow-sm rounded-xl p-5">
 							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 								<div class="text-xl font-bold">Flexible hosting options</div>
 								<div>ThreatMatic can be hosted in the cloud, privately, or as a hybrid model to protect all your assets — regardless of size, scope, or location — in milliseconds.</br></div>
@@ -87,14 +124,14 @@ import { Bug } from 'lucide-astro';
 			<div class="flex  flex-col md:flex-row m-5 text-center md:gap-x-30 gap-y-10 mt-3 md:px-15 px-5" >
 				<div>
 					<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
-						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5 shadow-xl/30 shadow-[#49BFBF] inset-shadow-sm inset-shadow-cyan-500/50 rounded-xl p-5 ">
 							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 								<div class="text-xl font-bold"> Endpoint-Centric Enforcement</div>
 								<div class="">Delivers ultra-fast Zero Trust Network Access (ZTNA) directly on all endpoints, ideal for Cybersecurity Mesh (CSMA) environments.</div>
 							</div> 
 						</div>
 
-						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5 shadow-xl/30 shadow-[#49BFBF] inset-shadow-sm inset-shadow-cyan-500/50 rounded-xl p-5 ">
 							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 								<div class="text-xl font-bold">Rapid Onboarding</div>
 								<div>Deploy user and app ID-based least-privilege policies in minutes — no complexity, no delays.</br></div>
@@ -118,32 +155,34 @@ import { Bug } from 'lucide-astro';
 			<div class="flex  flex-col md:flex-row m-5 text-center md:gap-x-30 gap-y-10 mt-3 md:px-15 px-5" >
 				<div>
 					<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
-						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  shadow-xl/30 shadow-[#49BFBF] inset-shadow-sm inset-shadow-cyan-500/50 rounded-xl p-5">
 							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 								<div class="text-xl font-bold">Highly Modular & Decoupled</div>
 								<div>Components operate independently and asynchronously for maximum resilience and uninterrupted performance.</div>
 							</div> 
 						</div>
 
-						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5 shadow-xl/30 shadow-[#49BFBF] inset-shadow-sm inset-shadow-cyan-500/50 rounded-xl p-5 ">
 							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 								<div class="text-xl font-bold">Cross-Platform Security</div>
 								<div>Supports Windows, macOS, and Linux with consistent, enterprise-grade protection.</br></div>
 							</div>
 						</div>
 
-						<div class="md:w-12/12 md:m-5 flex flex-col gap-y-5  ">
-							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+						<div class="md:w-12/12 md:m-5 flex flex-col gap-y-5 text-center">
+							<div class="md:w-12/12">
+								<div class=" flex flex-col gap-y-4 dark:text-slate-200">
 								<div class="text-xl font-bold"> Advanced Execution & Access Control</div>
 								<div class="">Prevents unauthorized program executions and enforces strict</br> bi-directional access policies.</p> </br></div>
 							</div>
+							</div>
+							
 						</div>
 						
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 </div>
@@ -224,61 +263,58 @@ import { Bug } from 'lucide-astro';
       }
     });
 
-	// window.addEventListener('scroll', () => {
-	// 	const moveRight = document.getElementById('moveright1');
-	//   const moveLeft = document.getElementById('moveleft1');
-	//   const moveUp = document.getElementById('moveup1');
 
-	 
-      
-    //   // Ensure the element exists
-    //   if (moveRight) {
-    //     // Apply translate class and trigger transition
-	// 	moveRight.classList.remove('-translate-x-15');
-    //     moveRight.classList.add('translate-x-0');
-    //   }
+//  window.addEventListener('load', () => {
+//     const video = document.getElementById('heroVideo');
+//     if (video) {
+//       // Avoid duplicating <source> on repeated loads
+//       if (video.querySelector('source') === null) {
+//         const source = document.createElement('source');
+//         source.src = '../src/assets/wh_viedo.mp4';
+//         source.type = 'video/mp4';
+//         video.appendChild(source);
+//       }
 
-	//   if (moveLeft) {
-    //     // Apply translate class and trigger transition
-    //     moveLeft.classList.remove('translate-x-15');
-	// 	moveLeft.classList.add('translate-x-0');
-    //   }
 
-	//   if (moveUp) {
-    //     // Apply translate class and trigger transition
-    //     moveUp.classList.remove('translate-y-15');
-	// 	moveUp.classList.add('translate-y-0');
-    //   }
-    
-	// });
-// 	window.addEventListener('scroll', () => {
-//     // Get all the elements you want to apply translate effect to
-//     const elements = [
-//         document.getElementById('moveright1'),
-//         document.getElementById('moveleft1'),
-//         document.getElementById('moveup1')
-//     ];
+//       video.addEventListener('canplay', () => {
+//         video.classList.remove('opacity-0');
+//       });
+//     }
+//   });
 
-//     // Loop through each element
-//     elements.forEach((element) => {
-//         if (element) {
-//             // Get the element's position relative to the viewport
-//             const rect = element.getBoundingClientRect();
-            
-//             // Check if the element is in the viewport (you can adjust the threshold here if needed)
-//             if (rect.bottom <= window.innerHeight) {
-//                 // Apply translate effect if the element is in the viewport
-//                 element.classList.remove('-translate-x-15', 'translate-y-15', 'translate-x-15');
-//                 element.classList.add('translate-x-0', 'translate-y-0','translate-x-0');
-//             } else {
-//                 // If the element is not in the viewport, reset its position (optional)
-//                 element.classList.add('-translate-x-15', 'translate-y-15','translate-x-15' );
-//                 element.classList.remove('translate-x-0', 'translate-y-0', 'translate-x-0');
-// 				element.classList.add('translated');
+window.addEventListener('load', () => {
+  const video = document.getElementById('heroVideo');
+  const overlay = document.getElementById('videoOverlayImage');
 
-// 				console.log(element.classList);
-//             }
-//         }
-//     });
-//  });
+  if (video) {
+    // Avoid duplicating <source> on repeated loads
+    if (video.querySelector('source') === null) {
+      const source = document.createElement('source');
+      source.src = '../src/assets/wh_viedo.mp4';
+      source.type = 'video/mp4';
+      video.appendChild(source);
+    }
+
+    // Wait for 5 milliseconds, then start showing the video
+    setTimeout(() => {
+      // Start playing (if not already)
+    //   video.play().catch((e) => {
+    //     // autoplay might be blocked on some browsers
+    //     console.warn("Autoplay failed:", e);
+    //   });
+
+      // Remove the overlay image after the video is ready
+      video.addEventListener('canplay', () => {
+        video.classList.remove('opacity-0');
+		if(overlay){
+			overlay.classList.add('opacity-0'); // fade out overlay
+			setTimeout(() => {
+			overlay.style.display = 'none'; // hide after transition
+			}, 300); // match the CSS duration
+		}
+        
+      });
+    }, 5); // 5 milliseconds delay
+  }
+});
 </script>

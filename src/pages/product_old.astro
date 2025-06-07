@@ -1,0 +1,318 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+ import './src/styles/global.css'
+ import Footer from '../components/footer.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+
+import tm_circle from '../assets/tm_circle.png';
+import th_video from '../assets/wh_viedo.mp4';
+import { Fingerprint } from 'lucide-astro';
+import { Clock } from 'lucide-astro';
+import { ArrowRightLeft } from 'lucide-astro';
+import { MonitorPlay } from 'lucide-astro';
+import { AppWindow } from 'lucide-astro';
+import { Scale } from 'lucide-astro';
+import { Hourglass } from 'lucide-astro';
+import { CloudUpload } from 'lucide-astro';
+import { Cog } from 'lucide-astro';
+import { Search } from 'lucide-astro';
+import { Shield } from 'lucide-astro';
+import { Funnel } from 'lucide-astro';
+import { Brain } from 'lucide-astro';
+import { Bug } from 'lucide-astro';
+
+---
+
+<Layout>
+<Header/>
+
+<div class="max-w-max flex flex-col items-center mt-12 md:mt-24	">
+
+	 <div class="flex justify-center items-center my-8 -z-20">
+		
+		<!-- <video 
+		   class="w-full rounded-lg shadow-lg" 
+		  controls 
+		  autoplay
+		  loop
+		  playsinline
+		  
+		  poster="../src/assets/Gradient_Background.jpeg"
+		> 
+		  <source src="../src/assets/wh_viedo.mp4" type="video/mp4"> 
+		  Your browser does not support the video tag.
+		</video> -->
+
+		<!-- <video
+		id="heroVideo"
+		class="w-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"
+		controls
+		autoplay
+		muted
+		loop
+		playsinline
+		poster="../src/assets/Gradient_Background.jpeg"
+		>
+		</video> -->
+
+		<div class="relative w-full rounded-lg shadow-lg">
+		<img
+			id="videoOverlayImage"
+			src="../src/assets/Gradient_Background.jpeg"
+			alt="Overlay Image"
+			class="absolute inset-0 w-full h-full object-cover rounded-lg z-10"
+		/>
+
+		<video
+			id="heroVideo"
+			class="w-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"
+			controls
+			autoplay
+			muted
+			loop
+			playsinline
+			poster="../src/assets/Threatmatic_Banner1.png"
+		>
+		</video>
+		</div>
+	  </div> 
+
+	<div class="continer">
+
+		<!-- <div class=" my-5 py-10 md:py-10 flex flex-col justify-center text-center  gap-y-5 md:gap-y-1 items-center md:px-15 px-5">
+			<div id="moveleft" class="font-ethnocentric3 text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-[#264D70] to-[#49BFBF] dark:text-slate-200 font-bold dark:font-normal transition-transform translate-x-15 duration-1000 -z-10">ThreatMatic deploys</div>	
+			<div class="md:flex gap-5">
+				<div class="hidden md:block md:w-70"></div>
+				<div id="moveright" class="lg:p-5 dark:text-slate-200 text-justify md:text-center grow md:text-lg transition-transform -translate-x-15 duration-1000 relative -z-10">Cybersecurity today is focussed on protecting the perimeter and as a consequence the security architecture is built from the outside-in. In our hyperconnected current world with widely dispersed users and applications, this design creates a blind spot in the "east-west aperture" that can result in security breaches often accompanied by loss of data, trust and productivity. These disruptive events are often crippling and expensive to mitigate.</div>
+				<div class="hidden md:block md:w-70"></div>
+				
+			</div>
+		</div>	 -->
+
+		
+		<div class="blocks relative -z-10">
+			<div class=" text-center text-2xl md:text-3xl dark:text-slate-200 text-[#264D70] py-3"><p>Built for Speed.<br class="block md:hidden"><span class="hidden md:inline"> </span> Designed for Trust.</p></div>
+			<div class="flex  flex-col md:flex-row m-5 text-center md:gap-x-30 gap-y-10 mt-3 md:px-15 px-5" >
+				<div>
+					<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+								<div class="text-xl font-bold">Simplicity</div>
+								<div>Zero-Trust solution founded on simplicity of deployment and ultra low-latency policy updates.</div>
+							</div> 
+						</div>
+
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+								<div class="text-xl font-bold">Flexible hosting options</div>
+								<div>ThreatMatic can be hosted in the cloud, privately, or as a hybrid model to protect all your assets — regardless of size, scope, or location — in milliseconds.</br></div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="blocks relative -z-10">
+			<div class=" text-center text-2xl md:text-3xl dark:text-slate-200 text-[#264D70] py-3"><p>Lightning-Fast ZTNA Built for Cybersecurity Mesh Architectures</p></div>
+			<div class="flex  flex-col md:flex-row m-5 text-center md:gap-x-30 gap-y-10 mt-3 md:px-15 px-5" >
+				<div>
+					<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+								<div class="text-xl font-bold"> Endpoint-Centric Enforcement</div>
+								<div class="">Delivers ultra-fast Zero Trust Network Access (ZTNA) directly on all endpoints, ideal for Cybersecurity Mesh (CSMA) environments.</div>
+							</div> 
+						</div>
+
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+								<div class="text-xl font-bold">Rapid Onboarding</div>
+								<div>Deploy user and app ID-based least-privilege policies in minutes — no complexity, no delays.</br></div>
+							</div>
+						</div>
+
+						<div class="md:w-12/12 md:m-5 flex flex-col gap-y-5  ">
+							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+								<div class="text-xl font-bold">Dynamic Microsegmentation</div>
+								<div>Highly flexible policy controls with fine-grained segmentation across <br> users, apps, and workloads.</br></div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="blocks relative -z-10">
+			<div class=" text-center text-2xl md:text-3xl dark:text-slate-200 text-[#264D70] py-3"><p>Modular Architecture.<br class="block md:hidden"><span class="hidden md:inline"> </span> Uninterrupted Protection.</p></div>
+			<div class="flex  flex-col md:flex-row m-5 text-center md:gap-x-30 gap-y-10 mt-3 md:px-15 px-5" >
+				<div>
+					<div class="flex flex-row flex-wrap gap-6 md:m-5 md:ml-10 justify-between ">
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+								<div class="text-xl font-bold">Highly Modular & Decoupled</div>
+								<div>Components operate independently and asynchronously for maximum resilience and uninterrupted performance.</div>
+							</div> 
+						</div>
+
+						<div class="md:w-5/12 md:m-5 flex flex-col gap-y-5  ">
+							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+								<div class="text-xl font-bold">Cross-Platform Security</div>
+								<div>Supports Windows, macOS, and Linux with consistent, enterprise-grade protection.</br></div>
+							</div>
+						</div>
+
+						<div class="md:w-12/12 md:m-5 flex flex-col gap-y-5  ">
+							<div class=" flex flex-col gap-y-4 dark:text-slate-200">
+								<div class="text-xl font-bold"> Advanced Execution & Access Control</div>
+								<div class="">Prevents unauthorized program executions and enforces strict</br> bi-directional access policies.</p> </br></div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+	
+
+
+
+
+<Footer />
+</Layout>
+<style>
+	@keyframes appearup {
+
+		from{
+			opacity: 0;
+			transform: translateY(100PX);
+		}
+		to{
+			opacity:1;
+			transform: translateY(0px);
+			
+		}
+		
+	}
+	.blocks{
+		animation:  appearup 10s linear;
+		animation-timeline: view();
+		animation-range: entry 0% cover 40%;
+	}
+
+	@keyframes appearLeft {
+
+	from{
+		opacity: 0;
+		transform: translateX(50PX);
+	}
+	to{
+		opacity:1;
+		transform: translateX(0px);
+		
+	}
+
+	}
+	.flowleft{
+	animation:  appearLeft 10s linear;
+	animation-timeline: view();
+	animation-range: entry 0% cover 40%;
+	scroll:none;
+	}
+</style>
+
+<script>
+	
+	  window.addEventListener('load', function() {
+
+      const moveRight = document.getElementById('moveright');
+	  const moveLeft = document.getElementById('moveleft');
+	  const moveUp = document.getElementById('moveup');
+
+      
+      // Ensure the element exists
+      if (moveRight) {
+        // Apply translate class and trigger transition
+		moveRight.classList.remove('-translate-x-15');
+        moveRight.classList.add('translate-x-0');
+      }
+
+	  if (moveLeft) {
+        // Apply translate class and trigger transition
+        moveLeft.classList.remove('translate-x-15');
+		moveLeft.classList.add('translate-x-0');
+      }
+
+	  if (moveUp) {
+        // Apply translate class and trigger transition
+        moveUp.classList.remove('translate-y-15');
+		moveUp.classList.add('translate-y-0');
+      }
+    });
+
+
+//  window.addEventListener('load', () => {
+//     const video = document.getElementById('heroVideo');
+//     if (video) {
+//       // Avoid duplicating <source> on repeated loads
+//       if (video.querySelector('source') === null) {
+//         const source = document.createElement('source');
+//         source.src = '../src/assets/wh_viedo.mp4';
+//         source.type = 'video/mp4';
+//         video.appendChild(source);
+//       }
+
+
+//       video.addEventListener('canplay', () => {
+//         video.classList.remove('opacity-0');
+//       });
+//     }
+//   });
+
+window.addEventListener('load', () => {
+  const video = document.getElementById('heroVideo');
+  const overlay = document.getElementById('videoOverlayImage');
+
+  if (video) {
+    // Avoid duplicating <source> on repeated loads
+    if (video.querySelector('source') === null) {
+      const source = document.createElement('source');
+      source.src = '../src/assets/wh_viedo.mp4';
+      source.type = 'video/mp4';
+      video.appendChild(source);
+    }
+
+    // Wait for 5 milliseconds, then start showing the video
+    setTimeout(() => {
+      // Start playing (if not already)
+    //   video.play().catch((e) => {
+    //     // autoplay might be blocked on some browsers
+    //     console.warn("Autoplay failed:", e);
+    //   });
+
+      // Remove the overlay image after the video is ready
+      video.addEventListener('canplay', () => {
+        video.classList.remove('opacity-0');
+		if(overlay){
+			overlay.classList.add('opacity-0'); // fade out overlay
+			setTimeout(() => {
+			overlay.style.display = 'none'; // hide after transition
+			}, 300); // match the CSS duration
+		}
+        
+      });
+    }, 5); // 5 milliseconds delay
+  }
+});
+</script>
