@@ -8,37 +8,33 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Threatmatic</title>
 	</head>
-	<body class="dark:bg-gradient-to-b from-[#264D70] via-[#3C657A] to-[#49BFBF]  bg-cover bg-fixed bg-no-repeat">
-		<slot />
 
-		<!-- <div class="p-10 bg-amber-500">test</div> -->
+	<body class="dark:bg-[url('./src/assets/Gradient-2.jpg')] bg-cover bg-fixed bg-no-repeat">
+		<slot />
 	</body>
-	<!-- <body class="dark:bg-black" style = " background-size: cover; transition: opacity 5s ease-in-out duration-500 delay-300; ">
+	
+	<!-- 
+	dark:bg-[url('./src/assets/Gradient-4.jpg')]
+
+
+	*******************
+<body class="dark:bg-[linear-gradient(to_bottom,_#1E3A5F_70%,_#49BFBF_100%)] bg-cover bg-fixed bg-no-repeat">
 		<slot />
-
-		 dark:bg-gradient-to-b from-[#264D70] via-[#3C657A] to-[#49BFBF] bg-cover bg-fixed bg-no-repeat transition-colors duration-750
-		
-		theam not match
-		dark:bg-gradient-to-b from-[#264D70] via-[#3C657A] to-[#49BFBF]
-		dark:bg-gradient-to-b from-[#1F3A45] via-[#2B4F5D] to-[#3F7A8C]
-		1
-
-		 dark:bg-gradient-to-b from-[#264D70]  via-[#377489] to-[#4C9784]
-			2
-		
-		  dark:bg-gradient-to-b from-[#264D70] from-10% to-[#4C9784] to-90%
-
-		 3
-
-		 bg-gradient-to-tr from-[#4C9784] from-10% to-[#264D70] to-90%
-
-		 4
-		 dark:bg-gradient-to-tr from-[#264D70] from-10% to-[#4C9784] 
-
-		 bg-gradient-to-b from-[#4C9784] from-10% to-[#264D70] to-90%
-
-		  bg-gradient-to-tr from-[#4C9784] via-[#2A6F82] to-[#264D70]
+	</body>
+	**********
+	<body class="dark:bg-gradient-to-b from-[#264D70]  to-[#49BFBF]  bg-cover bg-fixed bg-no-repeat">
+		<slot />
 	</body> -->
+
+	<!-- <body class="dark:bg-gradient-to-b from-[#264D70] via-[#3C657A] to-[#49BFBF]  bg-cover bg-fixed bg-no-repeat">
+		<slot />
+	</body> 
+	<body class="dark:bg-gradient-to-b from-[#264D70] via-[#0006b1] to-[#49BFBF]  bg-cover bg-fixed bg-no-repeat">
+		<slot />
+	</body>
+	
+	-->
+
 </html>
 
 <style>
