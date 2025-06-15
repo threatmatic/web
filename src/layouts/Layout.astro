@@ -1,5 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL;
+const gradientUrl = new URL('/assets/Gradient-3.jpg', Astro.site).href;
 ---
 <!doctype html>
 <html lang="en">
@@ -11,7 +12,7 @@ const base = import.meta.env.BASE_URL;
 		<title>Threatmatic</title>
 	</head>
 
-	<body class="dark:bg-[url('threatmatic/src/assets/Gradient-3.jpg')] bg-cover bg-fixed bg-no-repeat">
+	<body style={`background-image: url('${gradientUrl}');`} class="dark:bg-black bg-cover bg-fixed bg-no-repeat">
 		<slot />
 	</body>
 	
