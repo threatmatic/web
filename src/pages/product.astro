@@ -8,7 +8,7 @@ import Footer from '../components/footer.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
 
-import tm_circle from '../assets/tm_circle.png';
+import video_image from '../assets/Gradient_Background.jpeg';
 import th_video from '../assets/wh_viedo.mp4';
 import { Fingerprint } from 'lucide-astro';
 import { Clock } from 'lucide-astro';
@@ -36,12 +36,7 @@ import { Bug } from 'lucide-astro';
 		
 
 		<div class="relative w-full rounded-lg shadow-lg">
-		<img
-			id="videoOverlayImage"
-			src="../assets/Gradient_Background.jpeg"
-			alt="Overlay Image"
-			class="absolute inset-0 w-full h-full object-cover rounded-lg z-10"
-		/>
+		<img id="videoOverlayImage" src={video_image.src} class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Overlay Image"/>
 
 		<video
 			id="heroVideo"
