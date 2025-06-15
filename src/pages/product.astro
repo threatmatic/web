@@ -23,10 +23,11 @@ import th_video from '../assets/wh_video.mp4';
 		
 
 		<div class="relative w-full rounded-lg shadow-lg">
-		<img src={video_image.src} width="auto" height="auto" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Overlay Image"/>
+		<img id="videoOverlayImage" src={video_image.src} width="auto" height="auto" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Overlay Image"/>
 
 		<video
-			class="w-full rounded-lg shadow-lg"
+			id="heroVideo"
+			class="w-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"
 			controls
 			autoplay
 			muted
@@ -240,39 +241,25 @@ import th_video from '../assets/wh_video.mp4';
 //     }
 //   });
 
-// window.addEventListener('load', () => {
-//   const video = document.getElementById('heroVideo');
-//   const overlay = document.getElementById('videoOverlayImage');
+window.addEventListener('load', () => {
+  const video = document.getElementById('heroVideo');
+  const overlay = document.getElementById('videoOverlayImage');
 
-//   if (video) {
-//     // Avoid duplicating <source> on repeated loads
-//     if (video.querySelector('source') === null) {
-//       const source = document.createElement('source');
-//       source.src = '../assets/wh_video.mp4';
-//       source.type = 'video/mp4';
-//       video.appendChild(source);
-//     }
+  if (video) {
+    // Small delay to allow other assets to load
+    setTimeout(() => {
+      // Fade in video when ready to play
+      video.addEventListener('canplay', () => {
+        video.classList.remove('opacity-0');
 
-//     // Wait for 5 milliseconds, then start showing the video
-//     setTimeout(() => {
-//       // Start playing (if not already)
-//     //   video.play().catch((e) => {
-//     //     // autoplay might be blocked on some browsers
-//     //     console.warn("Autoplay failed:", e);
-//     //   });
-
-//       // Remove the overlay image after the video is ready
-//       video.addEventListener('canplay', () => {
-//         video.classList.remove('opacity-0');
-// 		if(overlay){
-// 			overlay.classList.add('opacity-0'); // fade out overlay
-// 			setTimeout(() => {
-// 			overlay.style.display = 'none'; // hide after transition
-// 			}, 300); // match the CSS duration
-// 		}
-        
-//       });
-//     }, 5); // 5 milliseconds delay
-//   }
-// });
+        if (overlay) {
+          overlay.classList.add('opacity-0'); // trigger CSS transition
+          setTimeout(() => {
+            overlay.style.display = 'none'; // hide it fully
+          }, 300); // match transition-duration
+        }
+      });
+    }, 5);
+  }
+});
 </script>
