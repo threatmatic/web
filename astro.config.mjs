@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://SriValliammai.github.io/threatmatic',
-  base: '/threatmatic/',
+  base: '',
   vite: {
     plugins: [tailwindcss()],
     
