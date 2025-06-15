@@ -3,9 +3,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme{
-	.dark{
-		--background-image-main : "url('/assets/Gradient-3.jpg')";
-	}
   --font-ethnocentric: 'Ethnocentric-Regular_thin';
   --font-ethnocentric2: 'Ethnocentric-Regular_thin2';
   --font-ethnocentric3: 'Ethnocentric-Regular_thin3';
@@ -50,15 +47,6 @@
 	font-weight: normal;
 	font-style: normal;
   }
-@layer utilities {
-  .bg-custom {
-    background-image: var(--background-image-main);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-}
-
 
 body {
 	/* font-family: 'Montserrat'; */
