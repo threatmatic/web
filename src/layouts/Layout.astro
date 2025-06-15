@@ -1,4 +1,6 @@
-
+---
+const base = import.meta.env.BASE_URL;
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -9,7 +11,7 @@
 		<title>Threatmatic</title>
 	</head>
 
-	<body class="dark:bg-[url('./src/assets/Gradient-3.jpg')] bg-cover bg-fixed bg-no-repeat">
+	<body class="dark:bg-[url('threatmatic/src/assets/Gradient-3.jpg')] bg-cover bg-fixed bg-no-repeat">
 		<slot />
 	</body>
 	
