@@ -245,17 +245,17 @@ window.addEventListener('load', () => {
   const video = document.getElementById('heroVideo');
   const overlay = document.getElementById('videoOverlayImage');
 
-  if (video && overlay) {
+  if (video) {
+    // Trigger when video is ready to play
     video.addEventListener('canplay', () => {
       video.classList.remove('opacity-0');
 
-      // Fade out the overlay
-      overlay.classList.add('opacity-0');
-
-      // When the fade transition ends, remove from layout
-      overlay.addEventListener('transitionend', () => {
-        overlay.style.display = 'none';
-      }, { once: true }); // ensures the listener is only run once
+      if (overlay) {
+        overlay.classList.add('opacity-0'); // trigger fade
+        setTimeout(() => {
+          overlay.style.display = 'none'; // remove after fade
+        }, 300); // match your CSS transition duration
+      }
     });
   }
 });
