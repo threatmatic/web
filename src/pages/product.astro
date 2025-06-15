@@ -23,11 +23,11 @@ import th_video from '../assets/wh_video.mp4';
 		
 
 		<div class="relative w-full rounded-lg shadow-lg">
-		<img id="videoOverlayImage" src={video_image.src} class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Overlay Image"/>
+		<!-- <img id="videoOverlayImage" src={video_image.src}class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Overlay Image"/> -->
 
 		<video
 			id="heroVideo"
-			class="w-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"
+			class="w-full rounded-lg shadow-lg"
 			controls
 			autoplay
 			muted
@@ -241,22 +241,25 @@ import th_video from '../assets/wh_video.mp4';
 //     }
 //   });
 
-window.addEventListener('load', () => {
-  const video = document.getElementById('heroVideo');
-  const overlay = document.getElementById('videoOverlayImage');
+// window.addEventListener('load', () => {
+//   const video = document.getElementById('heroVideo');
+//   const overlay = document.getElementById('videoOverlayImage');
 
-  if (video) {
-    // Trigger when video is ready to play
-    video.addEventListener('canplay', () => {
-      video.classList.remove('opacity-0');
+//   if (video) {
+//     // Small delay to allow other assets to load
+//     setTimeout(() => {
+//       // Fade in video when ready to play
+//       video.addEventListener('canplay', () => {
+//         video.classList.remove('opacity-0');
 
-      if (overlay) {
-        overlay.classList.add('opacity-0'); // trigger fade
-        setTimeout(() => {
-          overlay.style.display = 'none'; // remove after fade
-        }, 300); // match your CSS transition duration
-      }
-    });
-  }
-});
+//         if (overlay) {
+//           overlay.classList.add('opacity-0'); // trigger CSS transition
+//           setTimeout(() => {
+//             overlay.style.display = 'none'; // hide it fully
+//           }, 300); // match transition-duration
+//         }
+//       });
+//     }, 5);
+//   }
+// });
 </script>
