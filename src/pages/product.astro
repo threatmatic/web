@@ -9,21 +9,8 @@ import Footer from '../components/footer.astro';
 
 
 import video_image from '../assets/Gradient_Background.jpeg';
-import th_video from '../assets/wh_viedo.mp4';
-import { Fingerprint } from 'lucide-astro';
-import { Clock } from 'lucide-astro';
-import { ArrowRightLeft } from 'lucide-astro';
-import { MonitorPlay } from 'lucide-astro';
-import { AppWindow } from 'lucide-astro';
-import { Scale } from 'lucide-astro';
-import { Hourglass } from 'lucide-astro';
-import { CloudUpload } from 'lucide-astro';
-import { Cog } from 'lucide-astro';
-import { Search } from 'lucide-astro';
-import { Shield } from 'lucide-astro';
-import { Funnel } from 'lucide-astro';
-import { Brain } from 'lucide-astro';
-import { Bug } from 'lucide-astro';
+
+import th_video from '../assets/wh_video.mp4';
 
 ---
 
@@ -36,10 +23,9 @@ import { Bug } from 'lucide-astro';
 		
 
 		<div class="relative w-full rounded-lg shadow-lg">
-		<img id="videoOverlayImage" src={video_image.src} class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Overlay Image"/>
+		<!-- <img id="videoOverlayImage" src={video_image.src} width="auto" height="auto" class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Overlay Image"/> -->
 
 		<video
-			id="heroVideo"
 			class="w-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"
 			controls
 			autoplay
@@ -47,6 +33,8 @@ import { Bug } from 'lucide-astro';
 			loop
 			playsinline
 		>
+		<source src={th_video} type="video/mp4" />
+		 Your browser does not support the video tag.
 		</video>
 		</div>
 	  </div> 
@@ -251,39 +239,39 @@ import { Bug } from 'lucide-astro';
 //     }
 //   });
 
-window.addEventListener('load', () => {
-  const video = document.getElementById('heroVideo');
-  const overlay = document.getElementById('videoOverlayImage');
+// window.addEventListener('load', () => {
+//   const video = document.getElementById('heroVideo');
+//   const overlay = document.getElementById('videoOverlayImage');
 
-  if (video) {
-    // Avoid duplicating <source> on repeated loads
-    if (video.querySelector('source') === null) {
-      const source = document.createElement('source');
-      source.src = '../assets/wh_video.mp4';
-      source.type = 'video/mp4';
-      video.appendChild(source);
-    }
+//   if (video) {
+//     // Avoid duplicating <source> on repeated loads
+//     if (video.querySelector('source') === null) {
+//       const source = document.createElement('source');
+//       source.src = '../assets/wh_video.mp4';
+//       source.type = 'video/mp4';
+//       video.appendChild(source);
+//     }
 
-    // Wait for 5 milliseconds, then start showing the video
-    setTimeout(() => {
-      // Start playing (if not already)
-    //   video.play().catch((e) => {
-    //     // autoplay might be blocked on some browsers
-    //     console.warn("Autoplay failed:", e);
-    //   });
+//     // Wait for 5 milliseconds, then start showing the video
+//     setTimeout(() => {
+//       // Start playing (if not already)
+//     //   video.play().catch((e) => {
+//     //     // autoplay might be blocked on some browsers
+//     //     console.warn("Autoplay failed:", e);
+//     //   });
 
-      // Remove the overlay image after the video is ready
-      video.addEventListener('canplay', () => {
-        video.classList.remove('opacity-0');
-		if(overlay){
-			overlay.classList.add('opacity-0'); // fade out overlay
-			setTimeout(() => {
-			overlay.style.display = 'none'; // hide after transition
-			}, 300); // match the CSS duration
-		}
+//       // Remove the overlay image after the video is ready
+//       video.addEventListener('canplay', () => {
+//         video.classList.remove('opacity-0');
+// 		if(overlay){
+// 			overlay.classList.add('opacity-0'); // fade out overlay
+// 			setTimeout(() => {
+// 			overlay.style.display = 'none'; // hide after transition
+// 			}, 300); // match the CSS duration
+// 		}
         
-      });
-    }, 5); // 5 milliseconds delay
-  }
-});
+//       });
+//     }, 5); // 5 milliseconds delay
+//   }
+// });
 </script>
