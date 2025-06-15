@@ -1,29 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/header.astro';
- import './src/styles/global.css'
- import Footer from '../components/footer.astro';
+import '../styles/global.css'
+import Footer from '../components/footer.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
 
-import tm_circle from '../assets/tm_circle.png';
-import th_video from '../assets/wh_viedo.mp4';
-import { Fingerprint } from 'lucide-astro';
-import { Clock } from 'lucide-astro';
-import { ArrowRightLeft } from 'lucide-astro';
-import { MonitorPlay } from 'lucide-astro';
-import { AppWindow } from 'lucide-astro';
-import { Scale } from 'lucide-astro';
-import { Hourglass } from 'lucide-astro';
-import { CloudUpload } from 'lucide-astro';
-import { Cog } from 'lucide-astro';
-import { Search } from 'lucide-astro';
-import { Shield } from 'lucide-astro';
-import { Funnel } from 'lucide-astro';
-import { Brain } from 'lucide-astro';
-import { Bug } from 'lucide-astro';
+import video_image from '../assets/Gradient_Background.jpeg';
+
+import th_video from '../assets/wh_video.mp4';
 
 ---
 
@@ -34,49 +21,22 @@ import { Bug } from 'lucide-astro';
 
 	 <div class="flex justify-center items-center my-8 -z-20">
 		
-		<!-- <video 
-		   class="w-full rounded-lg shadow-lg" 
-		  controls 
-		  autoplay
-		  loop
-		  playsinline
-		  
-		  poster="../src/assets/Gradient_Background.jpeg"
-		> 
-		  <source src="../src/assets/wh_viedo.mp4" type="video/mp4"> 
-		  Your browser does not support the video tag.
-		</video> -->
-
-		<!-- <video
-		id="heroVideo"
-		class="w-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"
-		controls
-		autoplay
-		muted
-		loop
-		playsinline
-		poster="../src/assets/Gradient_Background.jpeg"
-		>
-		</video> -->
 
 		<div class="relative w-full rounded-lg shadow-lg">
-		<img
-			id="videoOverlayImage"
-			src="../src/assets/Gradient_Background.jpeg"
-			alt="Overlay Image"
-			class="absolute inset-0 w-full h-full object-cover rounded-lg z-10"
-		/>
+		<!-- <img id="videoOverlayImage" src={video_image.src}class="absolute inset-0 w-full h-full object-cover rounded-lg z-10" alt="Overlay Image"/> -->
 
 		<video
 			id="heroVideo"
-			class="w-full rounded-lg shadow-lg opacity-0 transition-opacity duration-300"
+			class="w-full rounded-lg shadow-lg"
 			controls
 			autoplay
 			muted
 			loop
 			playsinline
-			poster="../src/assets/Threatmatic_Banner1.png"
+			poster="../assets/Gradient_Background.jpeg"
 		>
+		<source src={th_video} type="video/mp4" />
+		 Your browser does not support the video tag.
 		</video>
 		</div>
 	  </div> 
@@ -281,39 +241,25 @@ import { Bug } from 'lucide-astro';
 //     }
 //   });
 
-window.addEventListener('load', () => {
-  const video = document.getElementById('heroVideo');
-  const overlay = document.getElementById('videoOverlayImage');
+// window.addEventListener('load', () => {
+//   const video = document.getElementById('heroVideo');
+//   const overlay = document.getElementById('videoOverlayImage');
 
-  if (video) {
-    // Avoid duplicating <source> on repeated loads
-    if (video.querySelector('source') === null) {
-      const source = document.createElement('source');
-      source.src = '../src/assets/wh_video.mp4';
-      source.type = 'video/mp4';
-      video.appendChild(source);
-    }
+//   if (video) {
+//     // Small delay to allow other assets to load
+//     setTimeout(() => {
+//       // Fade in video when ready to play
+//       video.addEventListener('canplay', () => {
+//         video.classList.remove('opacity-0');
 
-    // Wait for 5 milliseconds, then start showing the video
-    setTimeout(() => {
-      // Start playing (if not already)
-    //   video.play().catch((e) => {
-    //     // autoplay might be blocked on some browsers
-    //     console.warn("Autoplay failed:", e);
-    //   });
-
-      // Remove the overlay image after the video is ready
-      video.addEventListener('canplay', () => {
-        video.classList.remove('opacity-0');
-		if(overlay){
-			overlay.classList.add('opacity-0'); // fade out overlay
-			setTimeout(() => {
-			overlay.style.display = 'none'; // hide after transition
-			}, 300); // match the CSS duration
-		}
-        
-      });
-    }, 5); // 5 milliseconds delay
-  }
-});
+//         if (overlay) {
+//           overlay.classList.add('opacity-0'); // trigger CSS transition
+//           setTimeout(() => {
+//             overlay.style.display = 'none'; // hide it fully
+//           }, 300); // match transition-duration
+//         }
+//       });
+//     }, 5);
+//   }
+// });
 </script>

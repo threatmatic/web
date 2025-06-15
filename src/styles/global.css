@@ -3,7 +3,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme{
-  --background-image-main : "url('./src/assets/dark_bg_img.jpg')";
   --font-ethnocentric: 'Ethnocentric-Regular_thin';
   --font-ethnocentric2: 'Ethnocentric-Regular_thin2';
   --font-ethnocentric3: 'Ethnocentric-Regular_thin3';
