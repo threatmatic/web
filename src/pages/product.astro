@@ -62,7 +62,7 @@ import { Bug } from 'lucide-astro';
 		<div class="relative w-full rounded-lg shadow-lg">
 		<img
 			id="videoOverlayImage"
-			src="../src/assets/Gradient_Background.jpeg"
+			src="../assets/Gradient_Background.jpeg"
 			alt="Overlay Image"
 			class="absolute inset-0 w-full h-full object-cover rounded-lg z-10"
 		/>
@@ -289,7 +289,7 @@ window.addEventListener('load', () => {
     // Avoid duplicating <source> on repeated loads
     if (video.querySelector('source') === null) {
       const source = document.createElement('source');
-      source.src = '../src/assets/wh_video.mp4';
+      source.src = '../assets/wh_video.mp4';
       source.type = 'video/mp4';
       video.appendChild(source);
     }
